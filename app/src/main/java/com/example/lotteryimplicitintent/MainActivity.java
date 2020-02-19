@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void invokeWebSite(View view) {
-        // Get the URL text.
+        // Get the URL text
         String url = "http://www.swisslos.ch";
 
         // Parse the URI and create the intent
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         email.putExtra(Intent.EXTRA_TEXT, "Hey guys, the jackpot has just been broken. Rainer");
 
         // User should choose an email client he likes
+        // For features of Intent.createChooser see https://stackoverflow.com/questions/3804233/what-is-the-purpose-of-using-intent-createchooser-in-startactivity-while-sen
         Intent chooser = Intent.createChooser(email, getResources().getString(R.string.chooserTitleMail));
 
         // Verify that the intent will resolve to an activity
@@ -47,8 +48,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(chooser);
         else
             Log.d("ImplicitIntent", "Can't handle this!");
-
-
     }
 
 }
