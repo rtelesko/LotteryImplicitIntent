@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    // Intents and Intent Filters: https://developer.android.com/guide/components/intents-filters
     public void invokeWebSite(View view) {
         // Get the URL text
         String url = "http://www.swisslos.ch";
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(chooser);
         else
             Log.d("ImplicitIntent", "Can't handle this!");
+
     }
 
 }
